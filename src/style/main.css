@@ -1,0 +1,41 @@
+@import url("https://use.typekit.net/yzs3mnr.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+:root {
+  /* Colors custom properties */
+  --bg-color: rgb(9, 18, 56);
+  --card-bg-color: rgba(16, 28, 66, 0.6);
+  --main-text-color: rgb(255, 255, 255);
+  --location-search-bg: rgba(255, 255, 255, 0.1);
+  --secondary-text-color: rgb(120, 135, 188);
+  --search-bar-bg: rgba(108, 41, 251, 0.11);
+  --unit-toggle-slider: rgba(108, 41, 251, 0.3);
+  --suncurve-dashed: rgba(120, 135, 188, 0.2);
+  --uv-bar: rgb(108, 41, 251);
+  --uv-base-bar: rgb(255, 255, 255);
+  --prediction-card: rgb(25, 38, 80, 0.5);
+  --chart-selection-bg: rgba(120, 135, 188, 0.1);
+  /* Sizes custom properties */
+  --page-padding-sides: 3rem;
+  --page-padding-top-bottom: 8rem;
+  --sun-scale: 1;
+  --uv-curve-dashoffset: 223;
+  --suncurve-offset: 340;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--main-text-color);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: "objektiv-mk2", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - var(--page-padding-top-bottom));
+  padding: var(--page-padding-sides) var(--page-padding-top-bottom);
+}

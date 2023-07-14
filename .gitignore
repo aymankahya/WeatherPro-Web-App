@@ -1,0 +1,16 @@
+# Files to ignore when commiting to github repo
+
+
+# API Keys
+#####################
+.env
+
+
+#Dependecies
+####################
+/node_modules
+
+
+# OS generated files #
+######################
+.DS_Store

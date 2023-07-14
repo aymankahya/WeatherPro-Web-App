@@ -1,0 +1,133 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Styling */
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#logo span {
+  font-size: 1.8rem;
+}
+
+/* Search Bar Styling */
+.search-side input {
+  font-size: 0.9rem;
+  color: var(--main-text-color);
+  outline: none;
+  background: none;
+  border: 0;
+  width: 18rem;
+}
+
+.search-side input::placeholder {
+  color: var(--secondary-text-color);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--search-bar-bg);
+  border-radius: 1rem;
+  padding: 8px 1rem;
+}
+
+.search-side {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-btn-wrapper {
+  display: grid;
+  place-content: center;
+  cursor: not-allowed;
+}
+
+.search-side div span {
+  color: var(--secondary-text-color);
+  cursor: default;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.search-side:has(input:not(:placeholder-shown)) > div.search-btn-wrapper {
+  cursor: pointer;
+}
+
+.search-side:has(input:not(:placeholder-shown)) > div span {
+  color: var(--main-text-color);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.get-location {
+  display: grid;
+  place-content: center;
+  margin-left: 1rem;
+}
+
+.get-location span {
+  font-size: 1.2rem;
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.get-location:hover span {
+  color: var(--main-text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Temperature Unit Toggle Switch*/
+
+.unit-switch {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+  background-color: var(--search-bar-bg);
+  border-radius: 1rem;
+  padding: 8px 1.2rem 8px 1rem;
+  pointer-events: none;
+}
+
+.slider {
+  position: absolute;
+  z-index: -1;
+  left: 6%;
+  background-color: var(--unit-toggle-slider);
+  width: 2.8rem;
+  height: 1.7rem;
+  border-radius: 1rem;
+  pointer-events: none;
+  transition: left 0.3s ease-in-out;
+}
+
+.slider.clicked {
+  left: 49%;
+  transition: left 0.3s ease-in-out;
+}
+.unit-switch > span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  pointer-events: all;
+  transition: all 0.3s ease-in-out;
+}
+
+.unit-switch > span[active="false"] {
+  opacity: 30%;
+  transition: opacity 0.3s ease-in-out;
+}
