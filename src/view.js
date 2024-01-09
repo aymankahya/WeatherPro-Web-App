@@ -15,7 +15,9 @@ export default class UserInterface {
 
     // Day time and date
     this.currentTime = document.querySelector(".date h1");
+    this.currentTimerSmallSize = document.querySelector(".date-smaller h1");
     this.currentDate = document.querySelector(".date p");
+    this.currentDateSmallSize = document.querySelector(".date-smaller p");
 
     //Weather info display
     this.uvIndexValue = document.querySelector(".uv-index-value");
@@ -269,10 +271,24 @@ export default class UserInterface {
       hour: "2-digit",
       minute: "numeric",
     });
+
+    this.currentTimerSmallSize.innerHTML = new Date().toLocaleTimeString(
+      "en-US",
+      {
+        hourCycle: "h23",
+        hour12: true,
+        hour: "2-digit",
+        minute: "numeric",
+      }
+    );
   }
 
   renderDate() {
     this.currentDate.innerHTML = format(new Date(), "iiii, dd MMMM RRRR ");
+    this.currentDateSmallSize.innerHTML = format(
+      new Date(),
+      "iiii, dd MMMM RRRR "
+    );
   }
 
   renderUVindex(uvData) {

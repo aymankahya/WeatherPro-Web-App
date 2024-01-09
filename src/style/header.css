@@ -17,6 +17,11 @@
   font-size: 1.8rem;
 }
 
+#logo h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 /* Search Bar Styling */
 .search-side input {
   font-size: 0.9rem;
@@ -130,4 +135,20 @@
 .unit-switch > span[active="false"] {
   opacity: 30%;
   transition: opacity 0.3s ease-in-out;
+}
+
+@media (max-width: 950px) {
+  #logo h1 {
+    display: none;
+  }
+
+  .search-side input {
+    width: 180px;
+  }
+}
+
+@media (max-width: 590px) {
+  .search-side input {
+    width: 135px;
+  }
 }

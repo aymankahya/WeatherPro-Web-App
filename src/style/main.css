@@ -17,7 +17,7 @@
   --chart-selection-bg: rgba(120, 135, 188, 0.1);
   /* Sizes custom properties */
   --page-padding-sides: 3rem;
-  --page-padding-top-bottom: 8rem;
+  --page-padding-top-bottom: 2rem;
   --sun-scale: 1;
   --uv-curve-dashoffset: 223;
   --suncurve-offset: 340;
@@ -29,13 +29,41 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-family: "objektiv-mk2", sans-serif;
-  height: 100vh;
-  overflow: hidden;
 }
 
 #app {
   display: flex;
   flex-direction: column;
-  height: calc(100% - var(--page-padding-top-bottom));
-  padding: var(--page-padding-sides) var(--page-padding-top-bottom);
+  /* height: calc(100% - var(--page-padding-top-bottom)); */
+  padding-top: var(--page-padding-top-bottom);
+  padding-bottom: var(--page-padding-top-bottom);
+  padding-left: var(--page-padding-sides);
+  padding-right: var(--page-padding-sides);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .greeting-date-smaller {
+    display: none;
+  }
+
+  .greeting-date {
+    display: flex;
+  }
+}
+
+@media (max-width: 950px) {
+  :root {
+    --page-padding-sides: 3rem;
+  }
+}
+
+@media (max-width: 590px) {
+  :root {
+    --page-padding-sides: 2rem;
+    font-size: 12px;
+  }
 }
