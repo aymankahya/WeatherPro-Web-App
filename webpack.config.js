@@ -31,7 +31,7 @@ module.exports = {
     new Dotenv(),
 
     new HtmlWebpackPlugin({
-      title: "WeatherGo",
+      title: "WeatherPro",
       filename: "index.html",
       template: "src/index.html",
     }),
