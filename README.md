@@ -4,6 +4,10 @@
 
 WeatherPro is a comprehensive weather web application developed as part of the JavaScript learning journey in The Odin Project. This application provides users with location based weather forecasts, and detailed weather information for locations worldwide. It features a user-friendly interface that allows users to search for weather data by city or region, view current weather conditions, and access detailed forecasts.
 
+## Application Design Overview :
+
+![image](https://github.com/aymankahya/WeatherPro-Web-App/assets/63832251/bc314018-df92-4dcc-87fb-fe29c83740a2)
+
 ## Features
 
 - **Latest Weather Information**: Get the latest weather information for any city or region.
@@ -20,16 +24,16 @@ WeatherPro is a comprehensive weather web application developed as part of the J
   - HTML5
   - CSS3
   - JavaScript (ES6+)
-- **Libraries and Frameworks**:
-  - Chart.js: For creating interactive weather charts
+- **Libraries**:
+  - Chart.js: For creating interactive charts
   - Date-fns: For date manipulation and formatting
 - **Build Tools and Development**:
   - Webpack: Module bundler
   - Babel: JavaScript compiler
   - npm: Package manager
 - **APIs**:
-  - Weather API (not specified in the code, but used for fetching weather data)
-  - Google Maps API (for reverse geocoding)
+  - Weather API
+  - Google Maps API
 
 ## Project Structure
 
@@ -74,4 +78,4 @@ npm start
 - Building responsive user interfaces
 - Working with third party libraries (Chart.js/date-fns)
 - Implementing modular code structure
-- Using build tools like Webpack for modern web development
+- Using build tools like Webpack
